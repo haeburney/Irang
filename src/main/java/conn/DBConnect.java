@@ -4,23 +4,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//ì‹±ê¸€í†¤
+//½Ì±ÛÅæ
 public class DBConnect {
 	private static DBConnect dbconn = new DBConnect();
-	private String url = "jdbc:oracle:thin:@localhost:1521/xe"; //@dbì„œë²„ì£¼ì†Œ:ë¦¬ìŠ¤ë„ˆë²ˆí˜¸/sid
+	private String url = "jdbc:oracle:thin:@localhost:1521/xe";//@db¼­¹öÁÖ¼Ò:¸®½º³Ê¹øÈ£/sid
 	
 	private DBConnect() {}
 	
 	public static DBConnect getInstance() {
-		return dbconn;//ëª¨ë“  dbì‘ì—…ì„ ì´ connê°ì²´ë¡œ ì‹¤í–‰í•œë‹¤
+		return dbconn;//¸ğµç dbÀÛ¾÷À» ÀÌ conn°´Ã¼·Î ½ÇÇàÇÑ´Ù.
 	}
 	
 	public Connection conn() {
 		try {
-			//ë“œë¼ì´ë²„ ë¡œë“œ
+			//µå¶óÀÌ¹ö ·Îµå
 			Class.forName("oracle.jdbc.OracleDriver");
 			
-			//ì„¸ì…˜ìˆ˜ë¦½
+			//¼¼¼Ç¼ö¸³
 			return DriverManager.getConnection(url, "hr", "hr");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
