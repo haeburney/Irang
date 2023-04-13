@@ -28,7 +28,7 @@ function a () {
 	} else {
 		html = "<input type = 'date' name = 'e_date'>;"
 		
-		f.action = "${pageContext.request.contextPath }/kboard/edatelist.do";
+		f.action = "${pageContext.request.contextPath }/kboard/datelist.do";
 	}
 	span.innerHTML = html;
 	
@@ -68,14 +68,15 @@ function a () {
 <table border="1">
 <tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th></tr>
 
-<c:forEach var="vo" items="${list }">
+<c:forEach var="vo" items="${edate }">
 
-<tr><td>${vo.board_num }</td>
+<tr><td>${vo.board_num}</td>
 <td><a href="${pageContext.request.contextPath }/kboard/detail.do?num=${vo.board_num }">${vo.title }</a></td>
 <td>${vo.teacher_Id}</td>
 <td>${vo.w_date }</td>
 </tr>
 </c:forEach>
+
 </table>
 </body>
 </html>
