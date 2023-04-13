@@ -4,4 +4,4 @@
 bin
 site
 db
-/build
+build/

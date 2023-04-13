@@ -28,7 +28,7 @@ function a () {
 	} else {
 		html = "<input type = 'date' name = 'e_date'>;"
 		
-		f.action = "${pageContext.request.contextPath }/kboard/datelist.do";
+		f.action = "${pageContext.request.contextPath }/kboard/edatelist.do";
 	}
 	span.innerHTML = html;
 	
@@ -70,9 +70,9 @@ function a () {
 
 <c:forEach var="vo" items="${list }">
 
-<tr><td>${vo.num }</td>
-<td><a href="${pageContext.request.contextPath }/kboard/detail.do?num=${vo.num }">${vo.title }</a></td>
-<td>${vo.writer }</td>
+<tr><td>${vo.board_num }</td>
+<td><a href="${pageContext.request.contextPath }/kboard/detail.do?num=${vo.board_num }">${vo.title }</a></td>
+<td>${vo.teacher_Id}</td>
 <td>${vo.w_date }</td>
 </tr>
 </c:forEach>

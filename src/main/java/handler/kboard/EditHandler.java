@@ -18,6 +18,7 @@ public class EditHandler implements Handler {
 		String view = "/list.jsp";
 		
 	if(	request.getMethod().equals("GET")) {
+		
 			int num= Integer.parseInt(request.getParameter("num"));
 		KboardService service = new KboardService(); 
 		KboardVo vo = service.getByNum(num);

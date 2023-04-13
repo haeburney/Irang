@@ -68,11 +68,11 @@ function a () {
 <table border="1">
 <tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th></tr>
 
-<c:forEach var="vo" items="${list }">
+<c:forEach var="vo" items="${edate }">
 
-<tr><td>${vo.num }</td>
-<td><a href="${pageContext.request.contextPath }/kboard/detail.do?num=${vo.num }">${vo.title }</a></td>
-<td>${vo.writer }</td>
+<tr><td>${vo.board_num}</td>
+<td><a href="${pageContext.request.contextPath }/kboard/detail.do?num=${vo.board_num }">${vo.title }</a></td>
+<td>${vo.teacher_Id}</td>
 <td>${vo.w_date }</td>
 </tr>
 </c:forEach>
