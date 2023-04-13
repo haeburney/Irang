@@ -16,11 +16,17 @@ public class KboardService {
 	public void addboard(KboardVo vo) {
 		dao.insert(vo);
 	}
+	
+	//글 번호로 검색 
+	public KboardVo getByNum(int num) {
+		return dao.select(num);
+	}
 
 	// 글 수정
 	public void editboard(KboardVo vo) {
 		dao.update(vo);
 	}
+	
 
 	// 글 삭제
 	public void delBoard(int num) {
@@ -47,6 +53,7 @@ public class KboardService {
 		public ArrayList<KboardVo> getAll() {
 			return dao.selectAll();
 		}
+		
 
 		
 }

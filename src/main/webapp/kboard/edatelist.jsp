@@ -76,6 +76,7 @@ function a () {
 <td>${vo.w_date }</td>
 </tr>
 </c:forEach>
+
 </table>
 </body>
 </html>
