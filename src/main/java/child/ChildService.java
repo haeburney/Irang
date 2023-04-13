@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ChildService {
 	private ChildDao dao;
+	public final static String path="C:\\Users\\wnsgk\\Desktop\\web_workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\webapps\\child\\";
 	
 	public ChildService() {
 		dao = new ChildDao();

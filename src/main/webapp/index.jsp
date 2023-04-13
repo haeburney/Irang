@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-dwdwdwd
+<a href="${pageContext.request.contextPath }/child/list.do">내반 아이들</a>
 </body>
 </html>
